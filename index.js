@@ -30,7 +30,8 @@ const apiCallCounterMiddleware = async (req, res, next) => {
     }
   };
 app.use(apiCallCounterMiddleware);
-mongoose.connect('mongodb://localhost:27017/DataNeuron', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://ashutoshsingh:Priya2931@cluster0.ob7c0dq.mongodb.net/?retryWrites=true&w=majority',
+ { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
